@@ -1,0 +1,16 @@
+{% extends "main/base.html" %}
+{% load static %}
+ 
+{% block title %}View List{% endblock %}
+
+{% block content %}
+	<div> 
+		Sorting method:<p id="sortingmethod" style="float:right"> N of Childs (Asc) </p>
+	</div>
+	{% load django_tables2 %}
+	{% render_table table %}
+{% endblock %}
+
+{% block js %}
+<script src="{% static 'main/table_sorting.js' %}"></script>  
+{% endblock %}

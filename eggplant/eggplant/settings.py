@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'main.apps.MainConfig',
     'crispy_forms',
+    "django_tables2",
 ]
 
 MIDDLEWARE = [
@@ -115,6 +116,7 @@ USE_L10N = True
 
 USE_TZ = True
 
+DJANGO_TABLES2_TEMPLATE = "django_tables2/bootstrap.html"
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
