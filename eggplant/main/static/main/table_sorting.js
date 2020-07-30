@@ -10,7 +10,9 @@ function getParameter(parameter)
 	return urlParams.get(parameter);
 }
 
-
+/**
+ * Summary. Updates the sortingmethod and sort form fields with the sorting and filter parameters
+ */
 function updateSortingMethod()
 {
 	//get sorting method and field
@@ -20,8 +22,9 @@ function updateSortingMethod()
 		var order ="";
 		//Check if the sorting order is ASC or DESC
 		(method.includes("-")) ? order="(DESC)" : order="(ASC)";
-	
 		document.getElementById("sortingmethod").innerHTML = method.replace("-", "") +" "+ order;
+		//update the hidden sort field in the form 
+		document.getElementById("sort").value = method;
 	}
 }
 
